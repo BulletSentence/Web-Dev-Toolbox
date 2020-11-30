@@ -14,7 +14,7 @@ Web designs of stylish templates for use on websites and mobile applications.
 <details>
 <summary> Loading Spinner </summary>
   <p align="center">
-  <img width="900" src="https://github.com/BulletSentence/Web-Dev-Style/blob/main/Loading_Spinner/spinner.PNG">
+  <img width="300" src="https://github.com/BulletSentence/Web-Dev-Style/blob/main/Loading_Spinner/Spinner.gif">
 </p>
   <p align="center">
    <a href="https://github.com/BulletSentence/Web-Dev-Style/tree/main/Loading_Spinner">Code Here! </a>
