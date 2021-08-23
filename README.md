@@ -4,7 +4,7 @@ Web designs of stylish templates for use on websites and mobile applications.
 <details>
 <summary> Misc & Assets </summary>
  
-<a href="https://bulletsentence.github.io/Misc/Loadings/Loading_Spinner"  target="_blank"> Loading Spinner </a>
+<a href="https://bulletsentence.github.io/Web-Dev-Toolbox/Misc/Loadings/Loading_Spinner"  target="_blank"> Loading Spinner </a>
 <a href="https://github.com/BulletSentence/Web-Dev-Toolbox/tree/main/Misc/Loadings/Loading_Spinner">
 <img src="https://github.com/BulletSentence/Web-Dev-Toolbox/blob/main/img/download.png"></a>
 <br>
