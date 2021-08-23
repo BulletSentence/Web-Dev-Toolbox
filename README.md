@@ -7,8 +7,8 @@ Web designs of stylish templates for use on websites and mobile applications.
   <img width="900" src="https://github.com/BulletSentence/Web-Dev-Style/blob/main/Eagle_Tab/Eagle_tab.PNG">
 </p>
   <p align="center">
-   <a href="https://github.com/BulletSentence/Web-Dev-Style/tree/main/Eagle_Tab">Code Here! </a>
-    <a href="https://github.com/BulletSentence/Web-Dev-Style/tree/main/Eagle_Tab">View Here! </a>
+   <a href="https://github.com/BulletSentence/Web-Dev-Style/tree/main/Eagle_Tab"> Code </a>
+    <a href="https://github.com/BulletSentence/Web-Dev-Style/tree/main/Eagle_Tab"> View </a>
 </p>
 </details>
 
@@ -18,6 +18,6 @@ Web designs of stylish templates for use on websites and mobile applications.
   <img width="300" src="https://github.com/BulletSentence/Web-Dev-Style/blob/main/Loading_Spinner/Spinner.gif">
 </p>
   <p align="center">
-   <a href="https://github.com/BulletSentence/Web-Dev-Style/tree/main/Loading_Spinner">Code Here! </a>
+   <a href="https://github.com/BulletSentence/Web-Dev-Style/tree/main/Loading_Spinner"> Code </a>
 </p>
 </details>
