@@ -4,9 +4,11 @@ Web designs of stylish templates for use on websites and mobile applications.
 <details>
 <summary> Misc & Assets </summary>
  
-<a href="https://bulletsentence.github.io/"  target="_blank"> Loading Spinner </a>
+<a href="https://bulletsentence.github.io/"  target="_blank"> Loading Spinner </a> -
+<a href="https://bulletsentence.github.io/"  target="_blank"> Code </a>
 <br>
 <a href="https://bulletsentence.github.io/"  target="_blank"> Countdown with functions </a>
+<a href="https://bulletsentence.github.io/"  target="_blank"> Code </a>
  
 </details>
 
