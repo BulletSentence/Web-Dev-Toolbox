@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Test Page</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<style>
+  .header-banner-top .primary-wrapper {
+	 margin: 0 auto;
+	 max-width: 900px;
+}
+ .header-banner-top .hidden {
+	 display: none;
+}
+ .header-banner-top .horizontal-nav ul {
+	 list-style: none;
+	 margin: 0;
+	 padding: 0;
+}
+ .header-banner-top .horizontal-nav li {
+	 display: inline-block;
+}
+ .header-banner-top .horizontal-nav a {
+	 display: block;
+}
+ .header-banner-top .horizontal-nav .folder {
+	 position: relative;
+	 cursor: pointer;
+}
+ .header-banner-top .horizontal-nav .folder ul {
+	 display: block;
+	 position: absolute;
+	 top: -9999px;
+	 left: 0;
+	 z-index: 999;
+}
+ .header-banner-top .horizontal-nav .folder li {
+	 display: block;
+}
+ .header-banner-top .horizontal-nav .folder:hover ul {
+	 top: 100%;
+}
+ .header-banner-top .mobile-menu-box, .header-banner-top .mobile-menu-label {
+	 display: none;
+}
+ .header-banner-top .banner {
+	 position: relative;
+}
+ .header-banner-top .banner .banner-image {
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+}
+ .header-banner-top .banner .primary-wrapper {
+	 position: relative;
+}
+ @media screen and (max-width: 700px) {
+	 .header-banner-top .horizontal-nav {
+		 overflow: hidden;
+		 height: 0;
+	}
+	 .header-banner-top .mobile-menu-box {
+		 display: none;
+	}
+	 .header-banner-top .mobile-menu-label {
+		 display: block;
+		 cursor: pointer;
+	}
+	 .header-banner-top .mobile-menu-label:before {
+		 content: 'Menu';
+	}
+	 .header-banner-top .mobile-menu-box:checked ~ .horizontal-nav {
+		 height: auto;
+	}
+	 .header-banner-top .mobile-menu-box:checked ~ .mobile-menu-label:before {
+		 content: 'Close';
+	}
+	 .header-banner-top .horizontal-nav li {
+		 display: block;
+	}
+	 .header-banner-top .horizontal-nav .folder ul {
+		 position: static;
+	}
+	 .header-banner-top .horizontal-nav .folder-toggle-label a:before {
+		 content: '+ ';
+	}
+	 .header-banner-top .horizontal-nav .folder-toggle-box:checked ~ .folder-toggle-label a:before {
+		 content: '- ';
+	}
+	 .header-banner-top .horizontal-nav .folder:hover ul, .header-banner-top .horizontal-nav .folder-toggle-box ~ ul {
+		 display: none;
+	}
+	 .header-banner-top .horizontal-nav .folder-toggle-box:checked ~ ul {
+		 display: block;
+	}
+}
+ .header-banner-top {
+	 text-align: center;
+}
+ .header-banner-top .main-navigation {
+	 background: #fff;
+}
+ .header-banner-top .horizontal-nav a {
+	 padding: 1.5em 1em;
+	 color: #41464b;;
+	 text-decoration: none;
+	 text-transform: uppercase;
+	 font-size: 13px;
+	 letter-spacing: 1px;
+}
+ .header-banner-top .horizontal-nav a:hover, .header-banner-top .horizontal-nav .active-link a {
+	 color: rgb(7, 7, 7);
+}
+ .header-banner-top .horizontal-nav .folder ul {
+	 background-color: #fff;
+	 transition: padding 0.14s ease-out;
+	 text-align: left;
+}
+ .header-banner-top .horizontal-nav .folder a {
+	 padding: 0.5em 1em;
+	 white-space: nowrap;
+}
+ .header-banner-top .horizontal-nav .folder:hover ul {
+	 padding: 0.5em 0;
+}
+ .header-banner-top .banner {
+	 background-color: #fff;
+}
+ .header-banner-top .banner .banner-image {
+	 background: url(http://farm7.staticflickr.com/6169/6161511237_c1834b35bc_b.jpg) center center;
+	 background-size: cover;
+	 opacity: 0.5;
+}
+ .header-banner-top .banner .primary-wrapper {
+	 padding-top: 150px;
+	 padding-bottom: 150px;
+}
+ .header-banner-top .banner .site-title {
+	 letter-spacing: 2px;
+	 font-size: 52px;
+	 margin: 0 0 20px;
+}
+ .header-banner-top .banner .site-title a {
+	 color: #fff;
+	 text-decoration: none;
+}
+ .header-banner-top .banner .site-tagline {
+	 color: #41464b;;
+	 letter-spacing: 1px;
+	 font-size: 14px;
+	 margin: 0 20%;
+}
+ @media screen and (max-width: 700px) {
+	 .header-banner-top .horizontal-nav a {
+		 padding: 0.75em 1em;
+	}
+	 .header-banner-top .horizontal-nav > ul > li:first-child a {
+		 padding-top: 2em;
+	}
+	 .header-banner-top .horizontal-nav > ul > li:last-child a {
+		 padding-bottom: 2em;
+	}
+	 .header-banner-top .horizontal-nav li {
+		 display: block;
+	}
+	 .header-banner-top .horizontal-nav .folder ul {
+		 text-align: center;
+		 padding: 0.5em 0;
+		 margin: 0.5em 0;
+		 transition: none;
+		 background-color: #fff;
+	}
+	 .header-banner-top .horizontal-nav .folder:hover ul {
+		 padding: 0.5em 0;
+	}
+	 .header-banner-top .horizontal-nav .folder-toggle-label a {
+		 cursor: pointer;
+	}
+	 .header-banner-top .mobile-menu-label {
+		 color: black;
+		 background-color: #fff;
+		 padding: 1.5em 1em;
+		 text-decoration: none;
+		 text-transform: uppercase;
+		 font-size: 13px;
+		 letter-spacing: 1px;
+	}
+	 .header-banner-top .mobile-menu-box:checked ~ .mobile-menu-label {
+		 color: #41464b;;
+	}
+	 .header-banner-top .mobile-menu-box:checked ~ .horizontal-nav {
+		 padding: 1em 0;
+	}
+	 .header-banner-top .mobile-menu-box:checked ~ .mobile-menu-label:before {
+		 content: 'Close';
+	}
+}
+ 
+</style>
+
+
+<header class="header-banner-top">
+
+  <div class="main-navigation">
+    <input type="checkbox" name="mobile-menu-toggle" id="mobile-menu-toggle" class="mobile-menu-box" />
+    <nav class="horizontal-nav primary-wrapper" role='navigation'>
+      <ul>
+        <li class="folder"> 
+          <input type="checkbox" name="folder-toggle-1" id="folder-toggle-1" class="folder-toggle-box hidden" />
+          <label for="folder-toggle-1" class="folder-toggle-label"><a>About</a></label>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Corporate Sustainability</a></li>
+            <li><a href="#">Awards</a></li>
+          </ul>
+        </li>
+        <li class="folder"> 
+          <input type="checkbox" name="folder-toggle-1" id="folder-toggle-1" class="folder-toggle-box hidden" />
+          <label for="folder-toggle-1" class="folder-toggle-label"><a>Sustainability</a></label>
+          <ul>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Alliances</a></li>
+            <li><a href="#">Certifications</a></li>
+            <li><a href="#">Health and safety during covid-19</a></li>
+          </ul>
+        </li>
+        <li class="folder"> 
+          <input type="checkbox" name="folder-toggle-1" id="folder-toggle-1" class="folder-toggle-box hidden" />
+          <label for="folder-toggle-1" class="folder-toggle-label"><a>Products and Services</a></label>
+          <ul>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Alliances</a></li>
+            <li><a href="#">Certifications</a></li>
+            <li><a href="#">Health and safety during covid-19</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+    <label for="mobile-menu-toggle" class="mobile-menu-label hidden"></label>
+  </div>
+</header>
+
+
+
+</body>
+
+</html>
