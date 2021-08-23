@@ -8,6 +8,7 @@ Web designs of stylish templates for use on websites and mobile applications.
 </p>
   <p align="center">
    <a href="https://github.com/BulletSentence/Web-Dev-Style/tree/main/Eagle_Tab">Code Here! </a>
+    <a href="https://github.com/BulletSentence/Web-Dev-Style/tree/main/Eagle_Tab">View Here! </a>
 </p>
 </details>
 
