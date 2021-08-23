@@ -5,7 +5,7 @@ Web designs of stylish templates for use on websites and mobile applications.
 <details>
 <summary> Tabs </summary>
  
-<a href="https://bulletsentence.github.io/Web-Dev-Toolbox/Tabs/Eagle_Tab"  target="_blank"> * Eagle Tabs </a>
+<a href="https://bulletsentence.github.io/Web-Dev-Toolbox/Tabs/Eagle_Tab"  target="_blank"> Eagle Tabs </a>
  
 </details>
 
