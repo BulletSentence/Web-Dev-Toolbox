@@ -1,4 +1,4 @@
-# Web-Dev-Style
+# Web Developer Toolbox
 Web designs of stylish templates for use on websites and mobile applications.
 
 <details>
