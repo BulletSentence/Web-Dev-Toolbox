@@ -1,6 +1,21 @@
 # Web Developer Toolbox
 Web designs of stylish templates for use on websites and mobile applications.
 
+<details>
+<summary> Misc & Assets </summary>
+ 
+<a href="https://bulletsentence.github.io/"  target="_blank"> Loading Spinner </a>
+ 
+<a href="https://bulletsentence.github.io/"  target="_blank"> Countdown </a>
+ 
+</details>
+
+<details>
+<summary> Tabs </summary>
+ 
+<a href="https://bulletsentence.github.io/Web-Dev-Toolbox/Tabs/Eagle_Tab/"  target="_blank"> Eagle Tabs </a>
+ 
+</details>
 
 <details>
 <summary> Tabs </summary>
