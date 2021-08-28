@@ -19,4 +19,5 @@ Web designs of stylish templates for use on websites and mobile applications.
   <p align="center">
    <a href="https://github.com/BulletSentence/Web-Dev-Style/tree/main/Loading_Spinner">Code Here! </a>
 </p>
+
 </details>
