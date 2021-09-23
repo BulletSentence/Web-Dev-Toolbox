@@ -1,0 +1,159 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<body>
+    <center>
+        <form style="margin: 0 auto; width: 500px; padding-top: 40px; color: white; position: relative;">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <textarea id="tdebuginfo" onkeyup="analyze()" placeholder="Paste Here!" rows="30" cols="200"
+                                style="display: block; width: 500px; border: none; border-radius: 20px; outline: none; padding: 10px; font-family: 'Roboto', sans-serif; font-size: 1em; color: #676767; transition: border 0.5s; -webkit-transition: border 0.5s; -moz-transition: border 0.5s; -o-transition: border 0.5s; border: solid 3px black; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 150px; resize: none; overflow: auto; margin-bottom: 10px;"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <div id="output"></div>
+
+        <input id="cb" type="text" style="display: none;">
+        <div class="container py-5" style="display: none;">
+            <div class="row">
+                <div class="col-lg-5 col-md-8 mx-auto shadow border bg-white p-4 rounded">
+                    <form name="save-data">
+                        <div id="form_alerts"></div>
+                        <div class="form-group mb-3">
+                            <input type="text" id="Ad Name" name="Ad Name" class="form-control" placeholder="Ad Name">
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" id="Channel Name" name="Channel Name" class="form-control"
+                                placeholder="Channel Name">
+                        </div>
+                        <div class="form-group mb-3" id="url-sub">
+                            <input id="Ad URL" name="Ad URL" class="form-control" placeholder="Ad URL" rows="5"></input>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary me-2" id="sbmt" type="submit">OK</button>
+                            <button class="btn btn-danger" type="reset">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    POSTING = false;
+    function AddRecord(params) {
+        POSTING = true;
+        var req = {};
+        req.request = 'addnew';
+        req.addocid = params.addocid;
+        req.url = params.url;
+        req.posted_date = params.posted_date;
+        if (req.addocid.length == 0) {
+            console.log("Error adding, no addocid");
+            return false;
+        }
+    }
+</script>
+
+<script>
+
+    var url;
+    var bigtext;
+
+    var input_name = document.getElementById('Ad Name');
+    var input_chname = document.getElementById('Channel Name');
+    var input_url = document.getElementById('Ad URL');
+
+    function analyze() {
+        if (POSTING)
+            return false;
+        var data = document.getElementById('tdebuginfo').value;
+        if (data === '') {
+            document.getElementById('output').innerHTML = '';
+        } else {
+            try {
+                var json = JSON.parse(data);
+                if (typeof json.addocid === 'undefined') {
+                    document.getElementById('output').innerHTML = 'Debug Info text has No Ads Document Id';
+                } else {
+                    url = 'https://www.youtube.com/watch?v=' + json.addocid;
+                    bigtext = json.ad_skipBtnDbgInfo;
+                    var out = '';
+                    out += '<table border="0">';
+                    out += '<tr>';
+                    out += '<td><a href="' + url + '"  class="button url" target="_blank" style="background-color: black; border: none; color: white; padding: 10px 30px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 30px;">OPEN ON YOUTUBE</a> <a class="js-textareacopybtn" style="background-color: black; border: none; color: white; padding: 10px 30px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 30px;" onclick="copy()">COPY AD URL</a></td>';
+                    out += '</tr>';
+                    out += '</table>';
+                    var today = new Date();
+                    var dd = String(today.getDate()).padStart(2, '0');
+                    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+                    var yyyy = today.getFullYear();
+                    today = yyyy + '-' + mm + '-' + dd;
+                    var params = {
+                        addocid: json.addocid,
+                        url: url,
+                        ad_skipBtnDbgInfo: json.ad_skipBtnDbgInfo,
+                        posted_date: today
+                    };
+                    AddRecord(params);
+                    document.getElementById('output').innerHTML = out;
+
+                    var jsonData = JSON.parse(bigtext);
+
+                    $.getJSON('https://www.googleapis.com/youtube/v3/videos?part=snippet&id=' + json.addocid + '&fields=items(id%2Csnippet)&key=AIzaSyCEsaCbVPESU2DahwNbHTYO-qgDos7atmk',
+                        function (data) {
+                            input_name.value = data["items"]['0']['snippet']['title'];
+                            input_chname.value = data["items"]['0']['snippet']['channelTitle'];
+                        });
+
+                    input_url.value = url;
+
+                    var submit_sheet = document.getElementById('sbmt');
+
+                    setTimeout(function () {
+                        submit_sheet.click();
+                    }, 2000);
+
+                }
+            } catch (err) {
+                console.log(err.message);
+                document.getElementById('output').innerHTML = 'Invalid debug link';
+            }
+        }
+    }
+
+    function copy() {
+        var cb = document.getElementById("cb");
+        cb.value = input_url.value;
+        cb.style.display = 'block';
+        cb.select();
+        document.execCommand('copy');
+        cb.style.display = 'none';
+        alert("URL COPIED TO CLIPBOARD");
+    }
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyWTShJgu3MVaHc1IGi7KaTcYGdge5zOVkyYRWNG6o64dGM-vSEu10Nd3ih0o66ojGzMw/exec'
+    const form = document.forms['save-data']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => $("#form_alerts").html("<div class='alert alert-success'>Ok.</div>"))
+            .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Erro.</div>"))
+    })
+</script>
