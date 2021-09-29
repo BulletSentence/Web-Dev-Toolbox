@@ -11,8 +11,9 @@
                 <tbody>
                     <tr>
                         <td>
-                            <textarea id="tdebuginfo" onkeyup="analyze()" placeholder="Paste Here!" rows="30" cols="200"
-                                style="display: block; width: 500px; border: none; border-radius: 20px; outline: none; padding: 10px; font-family: 'Roboto', sans-serif; font-size: 1em; color: #676767; transition: border 0.5s; -webkit-transition: border 0.5s; -moz-transition: border 0.5s; -o-transition: border 0.5s; border: solid 3px black; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 150px; resize: none; overflow: auto; margin-bottom: 10px;"></textarea>
+                            <textarea id="tdebuginfo" onkeyup="analyze()" placeholder="Paste Debug Code Here:" rows="30"
+                                cols="200"
+                                style="display: block; width: 500px; border: none; border-radius: 5px; outline: none; padding: 10px; font-family: 'Roboto', sans-serif; font-size: 1em; color: #676767; transition: border 0.5s; -webkit-transition: border 0.5s; -moz-transition: border 0.5s; -o-transition: border 0.5s; border: solid 2px lightgray; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 150px; resize: none; overflow: auto; margin-bottom: 30px;"></textarea>
                         </td>
                     </tr>
                 </tbody>
@@ -88,9 +89,9 @@
                     url = 'https://www.youtube.com/watch?v=' + json.addocid;
                     bigtext = json.ad_skipBtnDbgInfo;
                     var out = '';
-                    out += '<table border="0">';
+                    out += '<table border="0" style="width: 500px;">';
                     out += '<tr>';
-                    out += '<td><a href="' + url + '"  class="button url" target="_blank" style="background-color: black; border: none; color: white; padding: 10px 30px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 30px;">OPEN ON YOUTUBE</a> <a class="js-textareacopybtn" style="background-color: black; border: none; color: white; padding: 10px 30px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 30px;" onclick="copy()">COPY AD URL</a></td>';
+                    out += '<td><a href="' + url + '"  class="button url" target="_blank" style="background-color: black; border: none; color: white; padding: 13px 30px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2% 4px 0px; width: 48%; cursor: pointer; border-radius: 3px; font-weight: bold;">OPEN ON YOUTUBE</a> <a class="js-textareacopybtn" style="background-color: black; border: none; color: white; padding: 13px 30px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 0px 4px 2%; width: 47%; cursor: pointer; border-radius: 3px; font-weight: bold;" onclick="copy()">COPY AD URL</a></td>';
                     out += '</tr>';
                     out += '</table>';
                     var today = new Date();
